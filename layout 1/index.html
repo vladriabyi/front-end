@@ -1,80 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Крафтові вироби зі шкіри</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f5f3ef;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3e2723;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            color: #fff;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .search {
+            display: flex;
+            align-items: center;
+        }
+
+        header .search input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+        }
+
+        nav {
+            width: 200px;
+            background-color: #e0d6d1;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #3e2723;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content .sections {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .content .sections div {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            color: #3e2723;
+        }
+
+        .content .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .content .main-content .item {
+            background-color: #ffffff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content .main-content .item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #e0d6d1;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+        }
+
+        .sidebar .trends {
+            list-style: none;
+        }
+
+        .sidebar .trends li {
+            margin: 10px 0;
+        }
+
+        .sidebar .trends li a {
+            text-decoration: none;
+            color: #3e2723;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            nav, .sidebar {
+                width: 100%;
+                border: none;
+            }
+
+            .content .sections {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <div class="logo">LOGO</div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#">Section 1</a></li>
-                <li><a href="#">Section 2</a></li>
-                <li><a href="#">Section 3</a></li>
-                <li><a href="#">Section 4</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search">
-            <button>🔍</button>
+        <div class="logo">Крафтові вироби зі шкіри</div>
+        <div class="search">
+            <input type="text" placeholder="Пошук">
         </div>
     </header>
-
-    <!-- Main Content Section -->
     <main>
-        <aside class="sidebar">
+        <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Explore</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">AI</a></li>
-                <li><a href="#">Section 5</a></li>
-                <li><a href="#">Section 6</a></li>
-                <li><a href="#">Section 7</a></li>
-                <li><a href="#">Section 8</a></li>
-                <li><a href="#">Section 9</a></li>
-                <li><a href="#">Section 10</a></li>
-                <li><a href="#">Section 11</a></li>
-                <li><a href="#">Section 12</a></li>
-                <li><a href="#">Section 13</a></li>
-                <li><a href="#">Section 14</a></li>
-                <li><a href="#">Section 15</a></li>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Досліджувати</a></li>
+                <li><a href="#">Повідомлення</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Продукти</a></li>
+                <li><a href="#">Контакти</a></li>
             </ul>
-        </aside>
-
-        <section class="content">
-            <div class="main-article">
-                <h1>About Leather Crafts</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                <img src="images/sample.jpg" alt="Leather Craft">
-                <p>More details about leather crafting go here...</p>
+        </nav>
+        <div class="content">
+            <div class="sections">
+                <div>Гаманці ручної роботи</div>
+                <div>Шкіряні сумки</div>
+                <div>Аксесуари</div>
+                <div>Індивідуальні замовлення</div>
             </div>
-
-            <div class="secondary-article">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+            <div class="main-content">
+                <div class="item">
+                    <img src="https://via.placeholder.com/300x200" alt="Гаманець ручної роботи">
+                    <p>Елегантний шкіряний гаманець для щоденного використання.</p>
+                </div>
+                <div class="item">
+                    <img src="https://via.placeholder.com/300x200" alt="Шкіряна сумка">
+                    <p>Стильна та міцна шкіряна сумка для будь-яких подій.</p>
+                </div>
             </div>
-        </section>
-
-        <aside class="trends">
-            <h2>Trends</h2>
-            <ul>
-                <li>Trend 1</li>
-                <li>Trend 2</li>
-                <li>Trend 3</li>
-                <li>Trend 4</li>
-                <li>Trend 5</li>
-                <li>Trend 6</li>
+        </div>
+        <aside class="sidebar">
+            <ul class="trends">
+                <li><a href="#">Новинки</a></li>
+                <li><a href="#">Хіти продажу</a></li>
+                <li><a href="#">Трендові дизайни</a></li>
+                <li><a href="#">Лімітовані серії</a></li>
+                <li><a href="#">Подарункові ідеї</a></li>
             </ul>
         </aside>
     </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Крафтові вироби зі шкіри. All rights reserved.</p>
-    </footer>
 </body>
 </html>

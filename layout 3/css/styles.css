@@ -29,14 +29,17 @@ header h1 {
 .content {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .main {
     flex: 3;
+    min-width: 300px;
 }
 
 .sidebar {
     flex: 1;
+    min-width: 200px;
 }
 
 .article {
@@ -92,4 +95,26 @@ header h1 {
 
 .sidebar li a:hover {
     color: #8B4513;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .main, .sidebar {
+        min-width: 100%;
+    }
+
+    .article img {
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
 }
