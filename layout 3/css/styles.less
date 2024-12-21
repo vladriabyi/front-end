@@ -1,6 +1,8 @@
 @primary-color: #8B4513;
 @background-color: #f7f1e3;
-@container-max-width: 1200px;
+@container-bg: #fff;
+@text-color: #333;
+@meta-color: #666;
 
 body {
   font-family: Arial, sans-serif;
@@ -13,8 +15,8 @@ body {
 
 .container {
   width: 90%;
-  max-width: @container-max-width;
-  background: #fff;
+  max-width: 1200px;
+  background: @container-bg;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -59,7 +61,7 @@ header {
 
         a {
           text-decoration: none;
-          color: #333;
+          color: @text-color;
 
           &:hover {
             color: @primary-color;
@@ -91,13 +93,13 @@ header {
 
   .meta {
     font-size: 0.9rem;
-    color: #666;
+    color: @meta-color;
     margin-bottom: 10px;
   }
 
   p {
     line-height: 1.6;
-    color: #444;
+    color: darken(@text-color, 10%);
   }
 }
 
@@ -118,7 +120,9 @@ header {
     padding: 10px;
   }
 
-  header h1 {
-    font-size: 1.5rem;
+  header {
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 }

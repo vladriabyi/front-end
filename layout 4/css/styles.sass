@@ -27,7 +27,6 @@ header
 
 .hero
   display: flex
-  flex-wrap: wrap
   align-items: center
   padding: 40px
   background-color: #d7ccc8
@@ -52,16 +51,22 @@ header
 
 .hero-image
   flex: 1
-  background: url('leather-crafts.jpg') no-repeat center center
-  background-size: cover
-  height: 300px
+  text-align: right
+
+  img
+    max-width: 100%
+    height: auto
+    border-radius: 10px
 
 .features
   display: flex
   flex-wrap: wrap
   justify-content: space-around
   padding: 40px
-  background-color: #efebe9
+  background-image: url(../images/background.jpg)
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
 
   .feature
     width: 100%
@@ -118,3 +123,5 @@ footer
 
       li
         margin-bottom: 10px
+
+/*# sourceMappingURL=styles.css.map

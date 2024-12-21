@@ -22,9 +22,13 @@ header {
 .logo {
   width: 120px;
   height: 120px;
-  background-color: #a67c52;
-  border-radius: 50%;
   margin: 0 auto 10px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .slogan {
@@ -52,8 +56,13 @@ header {
 .content-item .image {
   width: 100%;
   height: 150px;
-  background-color: #d7ccc8;
   margin-bottom: 10px;
+}
+.content-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .content-item h2 {
   margin-bottom: 10px;
@@ -85,6 +94,9 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
+.subscribe button:hover {
+  background-color: #8b5e3c;
+}
 
 footer {
   background-color: #a67c52;
@@ -105,6 +117,10 @@ footer {
 }
 .footer-list li {
   margin-bottom: 5px;
+}
+.footer-list li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -135,6 +151,18 @@ footer {
   }
   .subscribe input[type=email], .subscribe button {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    padding: 10px;
+  }
+  .content-item {
+    padding: 15px;
+  }
+  .subscribe input[type=email], .subscribe button {
+    font-size: 0.8rem;
+    padding: 8px;
   }
 }
 

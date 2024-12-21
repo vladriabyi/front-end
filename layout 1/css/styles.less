@@ -1,162 +1,137 @@
-// Змінні
-@primary-color: #3e2723;
-@secondary-color: #e0d6d1;
-@background-color: #f5f3ef;
-@text-color: #333;
-@header-height: 60px;
-@border-color: #ccc;
-@font-family: Arial, sans-serif;
+@color_1: #333;
+@color_2: #fff;
+@color_3: #3e2723;
+@font_family_1: Arial, sans-serif;
+@background_color_1: #f5f3ef;
+@background_color_2: #3e2723;
+@background_color_3: #e0d6d1;
+@background_color_4: #fff;
 
-// Загальні стилі
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
 body {
-  font-family: @font-family;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: @background-color;
-  color: @text-color;
+	font-family: @font_family_1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: @background_color_1;
+	color: @color_1;
 }
-
-// Хедер
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: @primary-color;
-  padding: 10px 20px;
-  border-bottom: 1px solid @border-color;
-  color: #fff;
-
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  .search {
-    display: flex;
-    align-items: center;
-
-    input {
-      padding: 5px;
-      border: 1px solid @border-color;
-      border-radius: 4px;
-    }
-  }
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: @background_color_2;
+	padding: 10px 20px;
+	border-bottom: 1px solid #ccc;
+	color: @color_2;
+	.logo {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.search {
+		display: flex;
+		align-items: center;
+		input {
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+	}
 }
-
-// Основний контент
 main {
-  display: flex;
-  flex: 1;
+	display: flex;
+	flex: 1;
 }
-
-// Навігація
 nav {
-  width: 200px;
-  background-color: @secondary-color;
-  padding: 10px;
-  border-right: 1px solid @border-color;
-
-  ul {
-    list-style: none;
-
-    li {
-      margin: 10px 0;
-
-      a {
-        text-decoration: none;
-        color: @primary-color;
-      }
-    }
-  }
+	width: 200px;
+	background-color: @background_color_3;
+	padding: 10px;
+	border-right: 1px solid #ccc;
+	ul {
+		list-style: none;
+		li {
+			margin: 10px 0;
+			a {
+				text-decoration: none;
+				color: @color_3;
+			}
+		}
+	}
 }
-
-// Контент
 .content {
-  flex: 1;
-  padding: 20px;
-
-  .sections {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-
-    div {
-      flex: 1;
-      text-align: center;
-      font-weight: bold;
-      color: @primary-color;
-    }
-  }
-
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    .item {
-      background-color: #fff;
-      padding: 15px;
-      border: 1px solid @border-color;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        border: 1px solid @border-color;
-      }
-    }
-  }
+	flex: 1;
+	padding: 20px;
+	.sections {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 20px;
+		div {
+			flex: 1;
+			text-align: center;
+			font-weight: bold;
+			color: @color_3;
+		}
+	}
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		.item {
+			background-color: @background_color_4;
+			padding: 15px;
+			border: 1px solid #ccc;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			img {
+				max-width: 100%;
+				height: auto;
+				margin-bottom: 10px;
+				border: 1px solid #ccc;
+			}
+		}
+	}
 }
-
-// Сайдбар
 .sidebar {
-  width: 200px;
-  background-color: @secondary-color;
-  padding: 10px;
-  border-left: 1px solid @border-color;
-
-  .trends {
-    list-style: none;
-
-    li {
-      margin: 10px 0;
-
-      a {
-        text-decoration: none;
-        color: @primary-color;
-      }
-    }
-  }
+	width: 200px;
+	background-color: @background_color_3;
+	padding: 10px;
+	border-left: 1px solid #ccc;
+	.trends {
+		list-style: none;
+		li {
+			margin: 10px 0;
+			a {
+				text-decoration: none;
+				color: @color_3;
+			}
+		}
+	}
 }
-
-// Медіа-запити
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  main {
-    flex-direction: column;
-  }
-
-  nav, .sidebar {
-    width: 100%;
-    border: none;
-  }
-
-  .content .sections {
-    flex-direction: column;
-    gap: 10px;
-  }
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	main {
+		flex-direction: column;
+	}
+	nav {
+		width: 100%;
+		border: none;
+	}
+	.sidebar {
+		width: 100%;
+		border: none;
+	}
+	.content {
+		.sections {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
 }
